@@ -1,0 +1,71 @@
+
+/*Forma 1 de realizar la disposicion, tenemos 3 columnas utilizando flex*/
+
+/*
+.matriz-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.fila-matriz{
+    display: flex;
+}*/
+
+
+/*Forma 2 de realizar la disposicion, con grid y un metodo que permite disponer en orden de items las casillas*/
+.matriz-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+    /*width: 300px;*/ /*Obligando a la matriz a que tenga un cierto tamaño, asi no salen las columnas tan separadas*/
+}
+
+.juego-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.casilla-btn img{
+    width: 100%;
+    height: 100%;
+}
+
+.casilla-btn{
+    width: 100px; /* Ajusta este valor según sea necesario */
+    height: 100px; /* Ajusta este valor según sea necesario */
+    padding: 0;
+}
+
+.juego-container span{
+    font-family: system-ui;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.mensajeGanador{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui;
+}
+
+.mensajeGanador button{
+    padding:5px;
+    margin-top:10px;
+    border-radius: 4px;
+    cursor:pointer;
+    font-family: system-ui;
+    transition:active 0.3 ease;
+}
+
+.mensajeGanador button:active{
+    background-color: rgb(225, 225, 225);
+}
